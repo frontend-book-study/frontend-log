@@ -54,16 +54,7 @@ export const theme: ThemeConfig = [
 export const head: HeadConfig = {}
 
 export const header: HeaderConfig = {
-  nav: [
-    {
-      text: 'Get Started',
-      link: '/hello-world'
-    },
-    {
-      text: 'Elements',
-      link: '/hello-world/elements'
-    }
-  ]
+  nav: []
 }
 
 export const footer: FooterConfig = {
