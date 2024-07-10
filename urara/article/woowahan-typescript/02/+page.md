@@ -20,9 +20,32 @@ tags:
 
 ### never 타입, Array 타입, enum 타입
 
-#### Q
+#### Q1 타입스크립트에서 never는 값을 반환할 수 없는 타입을 말합니다. 
+아래의 generateError 함수와 checkStatus 함수에 쓰인 never타입에 대해 설명해주세요.
 
-#### A
+```typescript
+function generateError(res: Response): never {
+  throw new Error(res.getMessage());
+}
+
+function checkStatus(): never {
+  while (true) {
+    // ...
+  }
+}
+```
+
+#### A1
+
+- `generateError` 함수는 `throw` 키워드를 사용해 에러를 발생시키는 함수입니다. 에러를 던질 때에는 값을 반환하는 것으로 간주하지 않기 때문에 반환 타입이 `never`입니다.
+- `checkStatus` 함수는 함수 내에서 while 문이 끝나지 않고 무한 루프로 실행되고 있습니다. 함수가 종료되지 않기 때문에 값을 반환하지 못해 never 타입입니다.
+
+#### Q2 enum 타입과 const enum 타입의 차이점에 대해 설명해주세요.
+
+#### A2 
+
+- enum 타입은 열거형이라고도 부르는 타입스크립트 특수 타입으로, 일종의 구조체를 만드는 타입 시스템입니다. enum 타입은 주로 문자열 상수를 생성하는 데 사용됩니다. 역방향으로 접근하더라도 접근이 가능합니다. 타입스크립트 코드가 자바스크립트로 변환될 대 즉시실행함수(IIFE)로 변환되어 트리쉐이킹이 되지 않는 경우가 있습니다.
+- const enum은 역방향으로의 접근을 허용하지 않는 열거형 선언 방식입니다. 자바스크립트에서의 객체에 접근하는 것과 유사합니다. 하지만 const enum으로도 숫자 상수로 관리되는 열거형은 접근을 방지하지 못하고, 문자열 상수로 관리해야 접근을 방지할 수 있습니다. const enum 또는 as const assertion 사용 시 트리쉐이킹이 발생하지 않도록 방지할 수 있습니다.
 
 ## 3.2 타입 조합
 
