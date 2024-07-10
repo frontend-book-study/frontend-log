@@ -1,8 +1,9 @@
 ---
-title: '1장 리액트 개발을 위해 꼭 알아야 할 자바스크립트'
+title: '1주차: 1장 들어가며 ~ 2장 타입 (22~79)'
 created: 2024-07-03
 updated: 2024-07-03
 tags:
+  - '우아한타입스크립with리액트'
   - 'Frontend'
   - 'Study'
   - 'Book'
