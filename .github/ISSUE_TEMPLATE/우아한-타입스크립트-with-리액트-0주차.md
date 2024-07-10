@@ -1,7 +1,7 @@
 ---
 name: 우아한 타입스크립트 with 리액트 0주차
 about: Describe this issue template's purpose here.
-title: ''
+title: '우아한 타입스크립트 with 리액트 0주차'
 labels: ''
 assignees: ''
 
