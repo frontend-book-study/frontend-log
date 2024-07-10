@@ -44,6 +44,7 @@ tags:
 특정 타입의 제네릭만 허용하기 위해서는 어떠한 키워드를 사용해야 할까요? foo => T라는 제네릭은 string 또는 number 또는 boolean의 타입만 올 수 있다고 가정했을 때 지정해보세요.
 
 #### A 
+extends를 사용하여 특정 타입을 상속받아 상속 받은 타입의 제네릭만 허용할 수 있습니다
 ``` typescript
 <T extends string | number | boolean>(arg: T)>(_: T) => T
 ```
