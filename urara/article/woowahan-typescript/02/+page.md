@@ -15,9 +15,15 @@ tags:
 ### any타입, unknown 타입, void 타입
 
 #### Q
-
+1. any와 unknown의 차이점에 대해 알려주세요.
+2. any와 unknown은 각각 어떤 상황일 때 사용하면 좋은지 타입 안정성과 관련지어 알려주세요.
+3. 함수의 반환 타입으로 void를 사용하는 이유는 무엇인가요?
+4. void와 undefined의 차이점은 무엇일까요?
 #### A
-
+1. any는 any타입에 어떤 타입이든 할당받을 수 있고 반대로 어떤 타입에라도 any타입을 할당 가능합니다. 반면 unknown은 unknown타입에 어떤 타입이든 할당받을 수 있는 것은 any와 동일하지만 any타입 외에 다른 타입에는 unknown타입을 할당할 수 없습니다.
+2. 둘 다 개발 단계에서 임시로 값을 지정해야 할 때 사용할 수 있습니다. 하지만 나중에 any타입을 특정 타입으로 변경해야 한다는 것을 깜빡하고 누락할 수 있기 때문에 any사용을 지양하고 unknown 사용을 지향하는 것이 좋습니다.
+3. 반환 값이 없기 때문에 함수 caller에게 반환값을 무시하라고 알려주기 위해 사용합니다.
+4. void는 반환값이 없으니 무시하라는 뜻이고 undefined는 명시적으로 undefined를 반환한다를 의미합니다. 또한, void는 tsconfigd에서 strictNullChecks 옵션이 꺼져있다면 undefined 또는 null을 의미합니다.
 ### never 타입, Array 타입, enum 타입
 
 #### Q
