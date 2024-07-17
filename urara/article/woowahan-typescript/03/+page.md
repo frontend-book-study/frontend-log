@@ -37,7 +37,30 @@ extends 경우도 GithubUser 타입의 nickName 타입은 "blan19" 입니다.
 #### Q2. 추가로 왜 그러한 타입이 나왔는지 설명해주세요
 
 #### A2. 왜냐하면 GithubUser 타입은 User 타입에 추가로 nickName 타입이 "blan19" 이라는 값을 가지기 때문에 그러한 타입이 나온겁니다.
+별개로 extends 키워드를 사용한 타입이 교차 타입과 100% 사응하지 않는다는 점을 주의해야합니다.
+```ts
+interface DeliveryTip {
+  tip:number;
+}
 
+interface Filter extends DeliveryTip {
+  tip:string;
+  //Interface 'Filter' incorrectly extends interface 'DeliveryTip'.
+  //Types of property 'tip' are incompatible.
+  //Type 'string' is not assignable to type 'number'.
+}
+```
+위 예시는 DeliveryTip을 extends한 Filter 타입에 string 타입의 속성 tip을 선언하면 DeliveryTip의 number 타입과 호환이 되지 않는다는 에러가 발생합니다.
+```ts
+type DeliveryTip = {
+  tip: number;
+}
+
+type Filter = DeliveryTip & {
+  tip: string;
+}
+```
+type과 &로 바꿨을 뿐인데 에러가 발생하지 않습니다. 이때 Filter의 tip 속성 타입은 never가 됩니다. type 키워드는 교차 타입으로 선언되었을 때 새롭게 추가되는 속성에 대해 미리 알 수 없기 때문에 에러가 발생하지 않습니다. 하지만 tip이라는 같은 속성에 대해 서로 호환되지 않는 타입이 선언되어 never 타입이 되버린다는 점을 주의해야 합니다.
 
 ## 4.2 타입 좁히기 - 타입 가드
 
