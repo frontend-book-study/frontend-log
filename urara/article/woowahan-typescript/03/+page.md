@@ -11,9 +11,33 @@ tags:
 
 ## 4.1 타입 확장하기
 
-#### Q
+```ts
+type User = {
+  nickName: string;
+}
 
-#### A
+type GithubUser = User & {
+  nickName: "blan19";
+}
+```
+#### Q1. GithubUser 타입의 nickName 타입은 무엇인가요?
+
+#### A1. GithubUser 타입의 nickName 타입은 "blan19" 입니다.
+```ts
+interface User {
+  nickName: string;
+}
+
+interface GithubUser extends User {
+  nickName: "blan19";
+}
+```
+extends 경우도 GithubUser 타입의 nickName 타입은 "blan19" 입니다.
+
+#### Q2. 추가로 왜 그러한 타입이 나왔는지 설명해주세요
+
+#### A2. 왜냐하면 GithubUser 타입은 User 타입에 추가로 nickName 타입이 "blan19" 이라는 값을 가지기 때문에 그러한 타입이 나온겁니다.
+
 
 ## 4.2 타입 좁히기 - 타입 가드
 
