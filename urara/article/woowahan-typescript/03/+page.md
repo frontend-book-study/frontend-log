@@ -40,12 +40,11 @@ export function convertToRange(selected?: Date | Range): Range | undefined {
 }
 ```
 
+#### A2
 instanceof 연산자는 인스턴스화된 객체 타입을 판별하는 타입 가드로 주로 사용됩니다. 
 A instanceof B 형태로 사용되며 A의 프로토타입 체인에 생성자 B가 존재하는지를 검사하여 존재한다면 true, 그렇지 않다면 false를 반환합니다.
 
 위 코드는 selected 객체의 프로토타입 체인에 Date가 존재한다면 { start: selected, end: selected }를 반환합니다.
-
-#### A2
 
 ## 4.3 타입 좁히기 - 식별할 수 있는 유니온
 
