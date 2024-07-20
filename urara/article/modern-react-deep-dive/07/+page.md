@@ -3,9 +3,7 @@ title: '7장 크롬 개발자 도구를 활용한 애플리케이션 분석'
 created: 2024-04-30 12:00
 updated: 2024-04-30 12:00
 tags:
-- 'Frontend'
-- 'Study'
-- 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

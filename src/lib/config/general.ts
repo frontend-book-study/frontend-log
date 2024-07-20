@@ -54,7 +54,16 @@ export const theme: ThemeConfig = [
 export const head: HeadConfig = {}
 
 export const header: HeaderConfig = {
-  nav: []
+  nav: [
+    {
+      text: '모던 리액트 Deep Dive',
+      link: '?tags=모던리액트DeepDive'
+    },
+    {
+      text: '우아한 타입스크립트 with 리액트',
+      link: '?tags=우아한타입스크립with리액트'
+    }
+  ]
 }
 
 export const footer: FooterConfig = {

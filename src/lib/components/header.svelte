@@ -59,10 +59,10 @@
   {#if !search}
     <div in:fly={{ x: -50, duration: 300, delay: 300 }} out:fly={{ x: -50, duration: 300 }} class="navbar">
       <div class="navbar-start">
+        <a href="/" class="btn btn-ghost normal-case text-lg">{site.title}</a>
         {#if headerConfig.nav}
           <Nav {path} {title} {pin} {scrollY} nav={headerConfig.nav} />
         {/if}
-        <a href="/" class="btn btn-ghost normal-case text-lg">{site.title}</a>
       </div>
       <div class="navbar-end">
         {#if headerConfig.search}

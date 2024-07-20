@@ -3,9 +3,7 @@ title: '10장 리액트 17과 18의 변경 사항 살펴보기'
 created: 2024-05-21
 updated: 2024-05-21
 tags:
-- 'Frontend'
-- 'Study'
-- 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

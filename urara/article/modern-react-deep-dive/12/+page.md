@@ -3,9 +3,7 @@ title: '12장 모든 웹 개발자가 관심을 가져야 할 핵심 웹 지표'
 created: 2024-05-28
 updated: 2024-05-28
 tags:
-- 'Frontend'
-- 'Study'
-- 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

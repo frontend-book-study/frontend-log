@@ -3,9 +3,7 @@ title: '6장 리액트 개발 도구로 디버깅하기'
 created: 2024-04-30
 updated: 2024-04-30
 tags:
-- 'Frontend'
-- 'Study'
-- 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

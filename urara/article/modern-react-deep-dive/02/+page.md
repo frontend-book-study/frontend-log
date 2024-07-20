@@ -3,9 +3,7 @@ title: '2장 리액트 핵심 요소 깊게 살펴보기'
 created: 2024-04-09
 updated: 2024-04-09
 tags:
-  - 'Frontend'
-  - 'Study'
-  - 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

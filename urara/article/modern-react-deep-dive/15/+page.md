@@ -3,9 +3,7 @@ title: '15장 마치며'
 created: 2024-06-04 12:00
 updated: 2024-06-04 12:00
 tags:
-- 'Frontend'
-- 'Study'
-- 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

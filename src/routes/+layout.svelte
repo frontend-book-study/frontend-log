@@ -15,7 +15,7 @@
 
   let { res, path } = data
 
-  $: if (data) path = data.path
+  $: if (data) path = data.url.search
 
   posts.set(res)
   tags.set(genTags(res))

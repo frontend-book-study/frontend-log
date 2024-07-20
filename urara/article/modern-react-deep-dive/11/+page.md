@@ -3,9 +3,7 @@ title: '11장 Next.js 13과 리액트 18'
 created: 2024-05-21 12:00
 updated: 2024-05-21 12:00
 tags:
-- 'Frontend'
-- 'Study'
-- 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

@@ -3,9 +3,7 @@ title: '8장 좋은 리액트 코드 작성을 위한 환경 구축하기'
 created: 2024-05-07
 updated: 2024-05-07
 tags:
-- 'Frontend'
-- 'Study'
-- 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

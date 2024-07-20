@@ -3,9 +3,7 @@ title: '5장 리액트와 상태 관리 라이브러리'
 created: 2024-04-23
 updated: 2024-04-23
 tags:
-- 'Frontend'
-- 'Study'
-- 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

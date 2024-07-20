@@ -57,7 +57,7 @@
         {#each allTags as tag}
           <button
             id={tag}
-            on:click={() => (tags.includes(tag) ? (tags = tags.filter(tagName => tagName != tag)) : (tags = [...tags, tag]))}
+            on:click={() => (tags.includes(tag) ? (tags = tags.filter(tagName => tagName != tag)) : (tags = [tag]))}
             class:!btn-secondary={tags.includes(tag)}
             class:shadow-lg={tags.includes(tag)}
             class="btn btn-sm btn-ghost normal-case border-dotted border-base-content/20 border-2 mt-4 mb-8 xl:m-0">

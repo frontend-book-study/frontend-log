@@ -3,10 +3,7 @@ title: '2주차: 3장 고급 타입 (80~119)'
 created: 2024-07-10
 updated: 2024-07-10
 tags:
-  - '우아한타입스크립with리액트'
-  - 'Frontend'
-  - 'Study'
-  - 'Book'
+- '우아한타입스크립with리액트'
 ---
 
 

@@ -3,9 +3,7 @@ title: '14장 웹사이트 보안을 위한 리액트와 웹페이지 보안 이
 created: 2024-06-04
 updated: 2024-06-04
 tags:
-- 'Frontend'
-- 'Study'
-- 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

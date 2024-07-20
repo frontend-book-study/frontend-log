@@ -3,9 +3,7 @@ title: '3장 리액트 훅 깊게 살펴보기'
 created: 2024-04-16
 updated: 2024-04-16
 tags:
-- 'Frontend'
-- 'Study'
-- 'Book'
+- '모던리액트DeepDive'
 ---
 
 # 중요한 부분 정리

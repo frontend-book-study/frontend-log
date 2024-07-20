@@ -11,7 +11,7 @@ export const site: SiteConfig = {
     avatar: '/assets/maskable@512.png',
     name: 'FE Developer',
     status: '🌸',
-    bio: ''
+    bio: '프론트엔드 개발과 관련한 스터디를 진행하고 기록하는 공간입니다.'
   },
   themeColor: '#3D4451'
 }
