@@ -49,9 +49,34 @@ tags:
 ## 9.1 리액트 훅(3)
 
 #### Q
+1. 다음 코드를 참고하여 useRef가 어떻게 사용되고 있는지 설명해주세요.
+```ts
+import { useRef } from 'react';
 
+const MyComponent = () => {
+  const ref = useRef<HTMLInputElement>(null);
+
+  const onClick = () => {
+    if (ref.current) {
+      ref.current?.focus();
+    }
+  };
+
+  return (
+    <>
+      <button onClick={onClick}>ref에 포커스!</button>
+      <input ref={ref} />
+    </>
+  );
+};
+```
+2. 리액트 훅을 안전하게 사용하기 위해 지켜야하는 규칙 2가지가 있습니다. p.300을 참고해서 간단하게 정리해주세요.
 
 #### A
+1. useRef는 <input /> 요소에 포커스를 설정하거나 특정 컴포넌트의 위치로 스크롤을 하는 등 DOM을 직접 선택해야 하는 경우 사용합니다. 예시에서는 button이 클릭됐을 때, input이 포커스 되도록 하기 위해 useRef를 사용하고 있습니다.
+
+2. 첫째, 훅은 항상 최상위 레벨에서 호출되어야 합니다. 조건문, 반복문, 중첩 함수, 캘르스 등의 내부에서는 훅을 호출하지 않아야 합니다. 둘째, 훅은 항상 함수 컴포넌트나 커스텀 훅 등의 리액트 컴포넌트 내에서만 호출되어야 합니다. 
+
 
 
 ## 9.2 커스텀 훅(1)
