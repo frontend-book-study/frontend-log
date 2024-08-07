@@ -101,7 +101,7 @@ export default useReturnComponent;
 ```
 
 #### A2.
-
+```ts
 import { useState, type ChangeEvent } from "react";
 
 const useInput = (initialValue: string) => {
@@ -115,4 +115,4 @@ const useInput = (initialValue: string) => {
 };
 
 export default useInput;
-
+```
