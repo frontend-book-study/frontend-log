@@ -31,11 +31,31 @@ tags:
 
 
 ## 9.1 리액트 훅(1)
+리액트에서는 상태 사이드이펙트를 처리하기 위한 생명주기 훅인 useEffect와 useLayoutEffect를 제공하고 있습니다.
 
-#### Q
+```jsx
+const Component = () => {
+  const [state, setState] = useState("");
+  
+  useLayoutEffect(() => {
+    setState("blan19")
+  }, [])
+  
+  useEffect(() => {
+    setState("who?")
+  }, [])
 
+  return (
+    <p>{state}</ p>
+  );
+};
+```
+#### Q1. 두 훅에서 발생하는 상태 변화에 대해서 설명해주세요.
+#### A1. 컴포넌트가 처음 렌더링되면 state의 초기값은 ""입니다. 그리고 useLayoutEffect가 실행되어 state를 blan19로 설정합니다. 그 다음 useEffect가 실행되어 state를 "who?"로 설정합니다. 
 
-#### A
+#### Q2. 어느 부분에서 생명주기 차이점이 존재하는지 설명해주세요.
+#### A2. useEffect는 componentDidUpdate와 같은 기존 생명주기 함수와는 다르게, 레이아웃 배치와 화면 렌더링이 모두 완료된 후에 실행됩니다. 반면 useLayoutEffect는 레이아웃 배치가 완료된 후에 실행됩니다. 따라서 useLayoutEffect를 통해 state가 빈값으로 뜨는 경우를 방지할 수 있습니다.
+
 
 
 ## 9.1 리액트 훅(2)
