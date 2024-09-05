@@ -88,7 +88,7 @@ export function convertToRange(selected?: Date | Range): Range | undefined {
 instanceof 연산자는 인스턴스화된 객체 타입을 판별하는 타입 가드로 주로 사용됩니다. 
 A instanceof B 형태로 사용되며 A의 프로토타입 체인에 생성자 B가 존재하는지를 검사하여 존재한다면 true, 그렇지 않다면 false를 반환합니다.
 
-위 코드는 selected 객체의 프로토타입 체인에 Date가 존재한다면 { start: selected, end: selected }를 반환합니다.
+위 코드는 selected 객체의 프로토타입 체인에 `Date`가 존재한다면 `{ start: selected, end: selected }`를 반환합니다.
 
 ## 4.3 타입 좁히기 - 식별할 수 있는 유니온
 
@@ -238,15 +238,16 @@ type Account = { account: string }
 ```
 
 #### A
-type One<Card> = { card: { card: string } }['card']으로 type One<Card> = { card: string }입니다. 
-type One<Account> = { account: { account: string } }['account']으로 type One<Account> = { card: string }입니다. 
 
-type ExcludeOne<Card> = { card: Partial<Record<never, undefined>> }['card']으로 type ExcludeOne<Card> = {}입니다.
-type ExcludeOne<Account> = { account: Partial<Record<never, undefined>> }['account']으로 type ExcludeOne<Account> = {}입니다.
+`type One<Card> = { card: { card: string } }['card']`으로 `type One<Card> = { card: string }`입니다. 
+`type One<Account> = { account: { account: string } }['account']`으로 `type One<Account> = { card: string }`입니다. 
 
-type One<Card | Account> = { card: { card: string } } | { account: { account: string } };이고
-type ExcludeOne<Card | Account> = { card: Partial<Record<Exclude<'card' | 'account', 'card'>, undefined>> } | { account: Partial<Record<Exclude<'card' | 'account', 'account'>, undefined>> };이므로,
+`type ExcludeOne<Card> = { card: Partial<Record<never, undefined>> }['card']`으로 `type ExcludeOne<Card> = {}`입니다.
+`type ExcludeOne<Account> = { account: Partial<Record<never, undefined>> }['account']`으로 `type ExcludeOne<Account> = {}`입니다.
 
-type PickOne<Card | Account> = 
+`type One<Card | Account> = { card: { card: string } } | { account: { account: string } };`이고
+`type ExcludeOne<Card | Account> = { card: Partial<Record<Exclude<'card' | 'account', 'card'>, undefined>> } | { account: Partial<Record<Exclude<'card' | 'account', 'account'>, undefined>> };`이므로,
+
+`type PickOne<Card | Account> = 
   | ({ card: string } & { account?: undefined })
-  | ({ account: string } & { card?: undefined });입니다.
+  | ({ account: string } & { card?: undefined });`입니다.
