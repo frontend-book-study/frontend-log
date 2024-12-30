@@ -8,6 +8,7 @@
   import Image from '$lib/components/prose/img.svelte'
   import Pagination from '$lib/components/post_pagination.svelte'
   import Comment from '$lib/components/post_comment.svelte'
+  import Giscus from "$lib/components/giscus.svelte";
   export let post: Urara.Post
   export let preview: boolean = false
   export let loading: 'eager' | 'lazy' = 'lazy'
@@ -104,10 +105,12 @@
     <main itemprop="articleBody" class:mt-4={post.type !== 'article'} class="urara-prose prose e-content">
       {#if !preview}
         <slot />
+        <Giscus repo="frontend-book-study/refactoring-2" repoId="R_kgDONAlolQ" category="Ideas" categoryId="DIC_kwDONAlolc4CjYYm" mapping="og:title" />
       {:else if post.html}
         {@html post.html}
       {/if}
     </main>
+
     {#if !preview && post.tags}
       <div class="divider mt-4 mb-0" />
       <div>
