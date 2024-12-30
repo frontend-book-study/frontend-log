@@ -17,7 +17,7 @@
     "kit:build": "cross-env NODE_OPTIONS=--max_old_space_size=7680 vite build",
     "dev:parallel": "run-p -r tsc:watch urara:watch \"kit:dev {@} \" --",
     "dev": "run-s tsc \"dev:parallel {@} \" --",
-    "build": "run-s tsc urara:build kit:build clean",
+    "build": "run-s generate-discussions tsc urara:build kit:build clean",
     "preview": "vite preview",
     "start": "cross-env ADAPTER=node pnpm build && node build",
     "check": "svelte-check --tsconfig ./tsconfig.json",
