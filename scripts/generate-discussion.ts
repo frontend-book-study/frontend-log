@@ -45,7 +45,7 @@ async function generateMarkdownFiles() {
       const { title, createdAt, number } = discussion
 
       // 디렉토리 생성
-      const dirPath = path.join(process.cwd(), 'urara', 'discussions', number.toString())
+      const dirPath = path.join(process.cwd(), 'urara', 'article', 'refactoring-2', number.toString())
       if (!fs.existsSync(dirPath)) {
         fs.mkdirSync(dirPath, { recursive: true })
       }
@@ -53,6 +53,8 @@ async function generateMarkdownFiles() {
       const content = `---
 title: '${title.replace(/'/g, "''")}'
 created: ${new Date(createdAt).toISOString().split('T')[0]}
+tags:
+- '리팩터링2판'
 ---`
 
       // 파일 저장
